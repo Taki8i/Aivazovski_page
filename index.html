@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ayvazovski</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="header">
@@ -11,10 +13,10 @@
       <nav class="nav">
       <ul class="nav__list">
         <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">About</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">History</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">Portfolio</a></li>
-        <li class="nav__item"><a class="nav__link" href="#">Contacts</a></li>
+        <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
+        <li class="nav__item"><a class="nav__link" href="#history">History</a></li>
+        <li class="nav__item"><a class="nav__link" href="#portfolio">Portfolio</a></li>
+        <li class="nav__item"><a class="nav__link" href="#footer">Contacts</a></li>
       </ul>
     </nav>
     <div class="header__content">
@@ -25,7 +27,7 @@
   </div>
   </header>
   <main class="main">
-    <section class="about">
+    <section class="about" id="about">
       <div class="container">
         <div class="about__content">
           <h2 class="about__title">About</h2>
@@ -37,7 +39,7 @@
         </div>
       </div>
     </section>
-    <section class="history">
+    <section class="history" id="history">
       <div class="container">
         <div class="history__content">
           <h2 class="history__title">History</h2>
@@ -46,7 +48,7 @@
         </div>
       </div>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <div class="container">
         <div class="portfolio__content">
           <h2 class="portfolio__title">Portfolio</h2>
@@ -68,34 +70,39 @@
       </div>
     </section>
   </main>
-  <footer class="footer">
-    <div class="footer__content">
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__content">
       <h2 class="footer__title">Contacts</h2>
-      <a class="footer__link" href="#">ayvazovskiy.su</a>
+      <a class="footer__link" href="https://en.wikipedia.org/wiki/Ivan_Aivazovsky" target="_blank">ayvazovskiy.su</a>
       <ul class="sprites">
         <li class="sprites__item">
-          <svg>
-          <use href="sprites.svg#youtube"></use>
+          <a class="sprites__link" href="#">
+            <svg class="sprites__svg youtube"><use href="sprites.svg#youtube"></use>
+        </a>
         </svg>
         </li>
         <li class="sprites__item">
-          <svg>
-          <use href="sprites.svg#linkedin"></use>
+          <a class="sprites__link" href="#">
+            <svg class="sprites__svg linkedin"><use href="sprites.svg#linkedin"></use>
         </svg>
+      </a>
         </li>
         <li class="sprites__item">
-          <svg>
-          <use href="sprites.svg#instagram"></use>
-        </svg>
+          <a class="sprites__link" href="#">
+            <svg class="sprites__svg instagram"><use href="sprites.svg#instagram"></use>
+        </svg></a>
         </li>
         <li class="sprites__item">
-          <svg>
-          <use href="sprites.svg#facebook"></use>
+          <a  class="sprites__link" href="#">
+            <svg class="sprites__svg facebook"><use href="sprites.svg#facebook"></use>
         </svg>
+      </a>
         </li>
       </ul>
       <p class="footer__descr">More works you can see in these social networks</p>
     </div>
+  </div>
   </footer>
 </body>
 </html>

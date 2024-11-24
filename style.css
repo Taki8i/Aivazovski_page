@@ -1,154 +1,189 @@
-/**
-  Нормализация блочной модели
- */
- *,
- *::before,
- *::after {
-   box-sizing: border-box;
- }
- 
- /**
-   Убираем внутренние отступы слева тегам списков,
-   у которых есть атрибут class
-  */
- :where(ul, ol):where([class]) {
-   padding-left: 0;
- }
- 
- /**
-   Убираем внешние отступы body и двум другим тегам,
-   у которых есть атрибут class
-  */
- body,
- :where(blockquote, figure):where([class]) {
-   margin: 0;
- }
- 
- /**
-   Убираем внешние отступы вертикали нужным тегам,
-   у которых есть атрибут class
-  */
- :where(
-   h1,
-   h2,
-   h3,
-   h4,
-   h5,
-   h6,
-   p,
-   ul,
-   ol,
-   dl
- ):where([class]) {
-   margin-block: 0;
- }
- 
- :where(dd[class]) {
-   margin-left: 0;
- }
- 
- :where(fieldset[class]) {
-   margin-left: 0;
-   padding: 0;
-   border: none;
- }
- 
- /**
-   Убираем стандартный маркер маркированному списку,
-   у которого есть атрибут class
-  */
- :where(ul[class]) {
-   list-style: none;
- }
- 
- /**
-   Обнуляем вертикальные внешние отступы параграфа,
-   объявляем локальную переменную для внешнего отступа вниз,
-   чтобы избежать взаимодействие с более сложным селектором
-  */
- p {
-   --paragraphMarginBottom: 24px;
- 
-   margin-block: 0;
- }
- 
- /**
-   Внешний отступ вниз для параграфа без атрибута class,
-   который расположен не последним среди своих соседних элементов
-  */
- p:where(:not([class]):not(:last-child)) {
-   margin-bottom: var(--paragraphMarginBottom);
- }
- 
- 
- /**
-   Упрощаем работу с изображениями
-  */
- img {
-   display: block;
-   max-width: 100%;
- }
- 
- /**
-   Наследуем свойства шрифт для полей ввода
-  */
- input,
- textarea,
- select,
- button {
-   font: inherit;
- }
- 
- html {
-   /**
-     Пригодится в большинстве ситуаций
-     (когда, например, нужно будет "прижать" футер к низу сайта)
-    */
-   height: 100%;
- }
- 
- /**
-   Плавный скролл
-  */
- html,
- :has(:target) {
-   scroll-behavior: smooth;
- }
- 
- body {
-   /**
-     Пригодится в большинстве ситуаций
-     (когда, например, нужно будет "прижать" футер к низу сайта)
-    */
-   min-height: 100%;
-   /**
-     Унифицированный интерлиньяж
-    */
-   line-height: 1.5;
- }
- 
- /**
-   Приводим к единому цвету svg-элементы
-  */
- svg *[fill] { fill: currentColor }
- svg *[stroke] { stroke: currentColor }
- 
- /**
-   Чиним баг задержки смены цвета при взаимодействии с svg-элементами
-  */
- svg * {
-   transition-property: fill, stroke;
- }
- 
- /**
-   Удаляем все анимации и переходы для людей,
-   которые предпочитают их не использовать
-  */
- @media (prefers-reduced-motion: reduce) {
-   * {
-     animation-duration: 0.01ms !important;
-     animation-iteration-count: 1 !important;
-     transition-duration: 0.01ms !important;
-     scroll-behavior: auto !important;
-   }
- }
+@font-face {
+  font-family: Roboto;
+  src: local('Roboto'),
+  url('fonts/Roboto.woff') format('woff'),
+  url('fonts/Roboto.woff2') format('woff2'),
+  url('fonts/Roboto.svg'), format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body{
+  font-family: 'Roboto';
+}
+
+.container{
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.header{
+  margin-bottom: 70px;
+}
+
+.nav{
+  border-bottom: 1px solid #828282;
+}
+
+.nav__list{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+  margin-bottom: 31px;
+}
+
+.nav__link{
+  font-weight: 700;
+  font-size: 18px;
+  color: #828282;
+  position: relative;
+  display: block;
+}
+
+.nav__link:hover{
+color: #000;
+}
+
+.nav__link:before{
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -5px;
+  left: 0px;
+  background-color: #000;
+  transition-duration: 1s;
+}
+
+.nav__link:hover::before{
+  width: 100%;
+}
+
+.header__content{
+  text-align: center;
+}
+
+#header__title{
+  font-weight: 700;
+  font-size: 45px;
+  margin-bottom: 22px;
+}
+
+.header__descr{
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 35px;
+}
+
+.main{
+  text-align: center;
+}
+
+.about{
+  background-color: #f6f6f6;  
+  padding: 56px 0px 98px;
+  margin-bottom: 64px;
+}
+
+.about__title{
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 42px;
+}
+
+.about__text{
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 11px;
+}
+
+.separator{
+  width: 420px;
+  height: 3px;
+  background-color: #000;
+}
+
+.history{
+  margin-bottom: 70px;
+}
+
+.history__title{
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 72px;
+}
+
+.history__img{
+  margin-bottom: 30px;
+}
+
+.portfolio{
+  background-color: #f6f6f6;
+  padding: 79px 0 107px;
+  margin-bottom: 55px;
+}
+
+.portfolio__title{
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 75px;
+}
+
+.gallery__item{
+  margin-bottom: 95px;
+}
+
+.gallery__img{
+  margin-bottom: 39px;
+}
+
+.gallery__img-descr{
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.footer{
+  text-align: center;
+}
+
+.footer__content{
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.footer__title{
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 75px;
+}
+
+.footer__link{
+  padding: 7px 15px;
+  background-color: #000;
+  color: #f6f6f6;
+  border-radius: 20px;
+  display: block;
+  max-width: 211px;
+  margin: 0 auto;
+  margin-bottom: 38px;
+}
+
+.sprites{
+  display: flex;
+  gap: 30px ;
+  margin-bottom: 35px;
+}
+
+.sprites__svg{
+  max-width: 65px;
+  height: 65px;
+}
+
+.footer__descr{
+  font-weight: 500;
+  font-size: 16px;
+  color: #828282;
+  max-width: 260px;
+  margin: 0 auto;
+}
