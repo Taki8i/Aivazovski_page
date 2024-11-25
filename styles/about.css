@@ -1,0 +1,27 @@
+.main{
+  text-align: center;
+}
+
+.about{
+  background-color: #f6f6f6;  
+  padding: 56px 0px 98px;
+  margin-bottom: 64px;
+}
+
+.about__title{
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 42px;
+}
+
+.about__text{
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 11px;
+}
+
+.separator{
+  max-width: 420px;
+  height: 3px;
+  background-color: #000;
+}
