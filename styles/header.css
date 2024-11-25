@@ -55,3 +55,22 @@ color: #000;
   font-size: 18px;
   margin-bottom: 35px;
 }
+
+@media (max-width: 480px) {
+  .header{
+    margin-bottom: 78px;
+  }
+
+  .nav{
+    display: none;
+  }
+
+  #header__title{
+  font-size: 32px;
+  max-width: 239px;
+  }
+
+  .header__content{
+    text-align: left;
+  }
+}

@@ -12,7 +12,7 @@
 <rect y="7.67383" width="33" height="3.83721" fill="black"/>
 <rect y="15.3496" width="33" height="3.83721" fill="black"/>
 </symbol>
-<symbol id="close" width="64" height="64" viewBox="0 0 64 64">
-<rect x="2.68701" width="27.3715" height="3.8" transform="rotate(45 2.68701 0)" fill="#828282"/>
-<rect x="0.831055" y="19.5566" width="27.3715" height="3.8" transform="rotate(-45 0.831055 19.5566)" fill="#828282"/></symbol>
+<symbol id="close" width="100" height="100" viewBox="0 0 64 64">
+    <path d="M0 14.545L1.455 16 8 9.455 14.545 16 16 14.545 9.455 8 16 1.455 14.545 0 8 6.545 1.455 0 0 1.455 6.545 8z" fill-rule="evenodd"/>
+</symbol>
 </svg>
