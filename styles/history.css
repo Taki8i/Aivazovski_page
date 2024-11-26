@@ -11,3 +11,23 @@
 .history__img{
   margin-bottom: 30px;
 }
+
+@media (max-width:480px){
+  .history{
+    margin-bottom: 79px;
+  }
+
+  .history__title{
+    margin-bottom: 59px;
+  }
+
+  .history__img{
+    height: 479px;
+    object-fit: fill;
+    margin-bottom: 33px;
+  }
+
+  .history__descr{
+    font-size: 14px;
+  }
+}

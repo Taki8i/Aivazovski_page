@@ -22,3 +22,21 @@
   font-weight: 500;
   font-size: 18px;
 }
+
+@media(max-width:480px){
+  .portfolio{
+    padding: 41px 0 50px;
+  }
+
+  .portfolio__title{
+    margin-bottom: 50px;
+  }
+
+  .gallery__item{
+    margin-bottom: 50px;
+  }
+
+  .gallery__img-descr{
+    font-size: 14px;
+  }  
+}

@@ -12,6 +12,10 @@ body{
   font-family: 'Roboto';
 }
 
+.main{
+  text-align: center;
+}
+
 .container{
   max-width: 950px;
   margin: 0 auto;

@@ -14,10 +14,11 @@
 }
 
 .footer__link{
+  font-size: 24px;
   padding: 7px 15px;
   background-color: #000;
   color: #f6f6f6;
-  border-radius: 20px;
+  border-radius: 25px;
   display: block;
   max-width: 211px;
   margin: 0 auto;
@@ -26,7 +27,7 @@
 
 .sprites{
   display: flex;
-  gap: 30px ;
+  justify-content: space-between;
   margin-bottom: 35px;
 }
 
@@ -38,7 +39,17 @@
 .footer__descr{
   font-weight: 500;
   font-size: 16px;
-  color: #828282;
+  color: #272727;
   max-width: 260px;
   margin: 0 auto;
+}
+
+@media (max-width:480px){
+  .footer__title{
+    margin-bottom: 80px;
+  }
+
+  .footer__link{
+    margin-bottom: 47px;
+  }
 }

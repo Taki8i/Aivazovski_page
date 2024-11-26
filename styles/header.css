@@ -16,7 +16,7 @@
 .nav__link{
   font-weight: 700;
   font-size: 18px;
-  color: #828282;
+  color: #272727;
   position: relative;
   display: block;
 }
@@ -63,6 +63,10 @@ color: #000;
 
   .nav{
     display: none;
+  } 
+  
+  .header__content{
+    text-align: left;
   }
 
   #header__title{
@@ -70,7 +74,14 @@ color: #000;
   max-width: 239px;
   }
 
-  .header__content{
-    text-align: left;
+  .header__descr{
+    font-size: 14px;
   }
+
+  .header__img{
+    object-fit: cover;
+    height: 440px;
+  }
+
+ 
 }
